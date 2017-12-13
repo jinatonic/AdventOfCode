@@ -44,6 +44,11 @@ function calcChecksum(input) {
     .reduce((total, curr) => total + curr)
 }
 
+const testInput1 = `5 1 9 5
+7 5 3
+2 4 6 8`
+console.assert(18 === calcChecksum(testInput1))
+
 console.log('Part 1: ', calcChecksum(input))
 
 
@@ -94,5 +99,10 @@ function calcDivisible(input) {
     })
     .reduce((total, curr) => total + curr)
 }
+
+const testInput2 = `5 9 2 8
+9 4 7 3
+3 8 6 5`
+console.assert(9 === calcDivisible(testInput2))
 
 console.log('Part 2: ', calcDivisible(input))
