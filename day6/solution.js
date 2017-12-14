@@ -36,7 +36,7 @@ function computeNumRedistributionsWrapper(input) {
 }
 
 const testInput = '0 2 7 0'
-console.assert(5 === computeNumRedistributionsWrapper(testInput))
+console.assert(computeNumRedistributionsWrapper(testInput) === 5)
 console.log('Part 1: ', computeNumRedistributionsWrapper(input))
 
 
@@ -56,5 +56,5 @@ function computeSizeOfLoop(input) {
   }
 }
 
-console.assert(4 === computeSizeOfLoop(testInput))
+console.assert(computeSizeOfLoop(testInput) === 4)
 console.log('Part 2: ', computeSizeOfLoop(input))

@@ -29,7 +29,7 @@ function calcChecksum(input) {
 const testInput1 = `5 1 9 5
 7 5 3
 2 4 6 8`
-console.assert(18 === calcChecksum(testInput1))
+console.assert(calcChecksum(testInput1) === 18)
 console.log('Part 1: ', calcChecksum(input))
 
 
@@ -64,5 +64,5 @@ function calcDivisible(input) {
 const testInput2 = `5 9 2 8
 9 4 7 3
 3 8 6 5`
-console.assert(9 === calcDivisible(testInput2))
+console.assert(calcDivisible(testInput2) === 9)
 console.log('Part 2: ', calcDivisible(input))

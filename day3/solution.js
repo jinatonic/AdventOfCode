@@ -40,10 +40,10 @@ function calcDistanceFromCenter(num) {
   return Math.abs(row - center) + Math.abs(col - center)
 }
 
-console.assert(0 === calcDistanceFromCenter(1))
-console.assert(3 === calcDistanceFromCenter(12))
-console.assert(2 === calcDistanceFromCenter(23))
-console.assert(31 === calcDistanceFromCenter(1024))
+console.assert(calcDistanceFromCenter(1) === 0)
+console.assert(calcDistanceFromCenter(12) === 3)
+console.assert(calcDistanceFromCenter(23) === 2)
+console.assert(calcDistanceFromCenter(1024) === 31)
 console.log('Part 1: ', calcDistanceFromCenter(265149))
 
 
@@ -63,7 +63,7 @@ function getMatrixCellValue(matrix, row, col) {
 }
 
 const testMatrix = [[undefined, 4, 2], [undefined, 1, 1], [ undefined, undefined, undefined]]
-console.assert(5 === getMatrixCellValue(testMatrix, 0, 0))
+console.assert(getMatrixCellValue(testMatrix, 0, 0) === 5)
 
 function findFirstLargest(num) {
   // sigh, i think i have to construct the whole matrix..
@@ -107,7 +107,7 @@ function findFirstLargest(num) {
   } 
 }
 
-console.assert(4 === findFirstLargest(2))
-console.assert(54 === findFirstLargest(50))
-console.assert(362 === findFirstLargest(351))
+console.assert(findFirstLargest(2) === 4)
+console.assert(findFirstLargest(50) === 54)
+console.assert(findFirstLargest(351) === 362)
 console.log('Part 2: ', findFirstLargest(265149))

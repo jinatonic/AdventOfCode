@@ -18,9 +18,9 @@ function isPassphraseValid(passphrase) {
   return !foundDuplicate
 }
 
-console.assert(true === isPassphraseValid('aa bb cc dd ee'))
-console.assert(false === isPassphraseValid('aa bb cc dd aa'))
-console.assert(true === isPassphraseValid('aa bb cc dd aaa'))
+console.assert(isPassphraseValid('aa bb cc dd ee'))
+console.assert(!isPassphraseValid('aa bb cc dd aa'))
+console.assert(isPassphraseValid('aa bb cc dd aaa'))
 console.log('Part 1: ', getNumValidPassphrases('./data.txt', isPassphraseValid))
 
 
@@ -52,9 +52,9 @@ function isPassphraseValidWithAnagramRule(passphrase) {
   return isValid
 }
 
-console.assert(true === isPassphraseValidWithAnagramRule('abcde fghij'))
-console.assert(false === isPassphraseValidWithAnagramRule('abcde xyz ecdab'))
-console.assert(true === isPassphraseValidWithAnagramRule('a ab abc abd abf abj'))
-console.assert(true === isPassphraseValidWithAnagramRule('iiii oiii ooii oooi oooo'))
-console.assert(false === isPassphraseValidWithAnagramRule('oiii ioii iioi iiio'))
+console.assert(isPassphraseValidWithAnagramRule('abcde fghij'))
+console.assert(!isPassphraseValidWithAnagramRule('abcde xyz ecdab'))
+console.assert(isPassphraseValidWithAnagramRule('a ab abc abd abf abj'))
+console.assert(isPassphraseValidWithAnagramRule('iiii oiii ooii oooi oooo'))
+console.assert(!isPassphraseValidWithAnagramRule('oiii ioii iioi iiio'))
 console.log('Part 2: ', getNumValidPassphrases('./data.txt', isPassphraseValidWithAnagramRule))

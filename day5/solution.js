@@ -18,7 +18,7 @@ function computeNumJumps(input) {
 }
 
 const testInput = "0\n3\n0\n1\n-3"
-console.assert(5 === computeNumJumps(testInput))
+console.assert(computeNumJumps(testInput) === 5)
 console.log('Part 1: ', computeNumJumps(data))
 
 
@@ -39,5 +39,5 @@ function computeNumJumpsPart2(input) {
   }
 }
 
-console.assert(10 === computeNumJumpsPart2(testInput))
+console.assert(computeNumJumpsPart2(testInput) === 10)
 console.log('Part 2: ', computeNumJumpsPart2(data))
